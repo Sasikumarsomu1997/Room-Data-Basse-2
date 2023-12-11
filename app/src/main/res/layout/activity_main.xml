@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+    <data>
+        <variable
+            name="click"
+            type="com.example.roomdatabase.MainactivityClickHandler" />
+    </data>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        android:background="@drawable/bc">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/recyclerview">
+
+        </androidx.recyclerview.widget.RecyclerView>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#93A1EF"
+            android:layout_margin="15dp"
+            android:onClick="@{click::fabclicked}"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/baseline_add_ic_call_24"
+            android:layout_alignParentBottom="true">
+
+        </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+
+    </RelativeLayout>
+</layout>

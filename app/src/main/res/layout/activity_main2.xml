@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+
+    <data>
+        <variable
+            name="contact"
+            type="com.example.roomdatabase.model.Contacts" />
+
+        <variable
+            name="clickHandler"
+            type="com.example.roomdatabase.Mainactivity2Handler" />
+    </data>
+
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="30dp"
+        android:background="@drawable/bc"
+        tools:context=".MainActivity2">
+
+        <EditText
+            android:text="@={contact.name}"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="28dp"
+            android:hint="Enter Name"/>
+
+        <EditText
+            android:text="@={contact.email}"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+            android:id="@+id/emailEDT"
+            android:layout_below="@id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter E-MAIL" />
+
+        <Button
+            android:onClick="@{clickHandler::onBtnClicked}"
+            android:id="@+id/submit"
+            android:layout_width="120dp"
+            android:layout_below="@id/emailEDT"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#0A0233"
+            android:layout_marginTop="48dp"
+            android:layout_marginLeft="120dp"
+            android:text="ADD"
+            android:textColor="@color/white"/>
+    </RelativeLayout>
+</layout>
